@@ -69,8 +69,62 @@ window.PORTFOLIO = {
   },
   "projects": [
     {
-      "id": "anomaly",
+      "id": "driving-scene-lab",
       "number": "01",
+      "title": "Driving Scene Lab",
+      "subtitle": "3D object tracking and sensor outage analysis.",
+      "category": "Computer Vision",
+      "year": "2026",
+      "featured": true,
+      "type": "driving",
+      "badge": "Featured project",
+      "description": "Replay recorded camera and LiDAR data to see how 3D tracks behave when sensor observations drop out.",
+      "tags": [
+        "nuScenes",
+        "SimpleTrack",
+        "Plotly Dash",
+        "YOLO11s"
+      ],
+      "metric": "162 frames",
+      "metricLabel": "Across 4 recorded scenes",
+      "github": "https://github.com/AhireRohit/driving-scene-lab-demo",
+      "demo": "https://driving-scene-lab.onrender.com/",
+      "dataset": "The replay uses front-camera images and LiDAR scans from nuScenes mini.",
+      "challenge": "Which tracks have fresh sensor evidence during an outage?",
+      "approach": "Built a synchronized replay that combines published CenterPoint detections, SimpleTrack tracks and cached YOLO11s camera detections. Added controls to simulate camera outages and withhold LiDAR detections.",
+      "result": "Inspect individual tracks across four recorded scenes and see which have fresh camera or LiDAR support and which are carried forward by the tracker.",
+      "disclaimer": "The demo replays cached results from recorded scenes."
+    },
+    {
+      "id": "cinepulse",
+      "number": "02",
+      "title": "CinePulse",
+      "subtitle": "Personalized movie recommendations with multi-stage ranking.",
+      "category": "Recommender Systems",
+      "year": "2026",
+      "featured": true,
+      "type": "cinema",
+      "badge": "Featured project",
+      "description": "Combines neural retrieval and collaborative filtering to rank movies for individual viewing histories.",
+      "tags": [
+        "PyTorch",
+        "FAISS",
+        "LightGBM",
+        "React"
+      ],
+      "metric": "+38.9%",
+      "metricLabel": "NDCG@10 vs. V1",
+      "github": "https://github.com/AhireRohit/CinePulse",
+      "demo": "https://ahirerohit.github.io/CinePulse/",
+      "dataset": "Evaluated on MovieLens 1M using a held-out cohort of 3,974 users.",
+      "challenge": "Can a multi-stage recommender improve the ordering of movies at the top of the list?",
+      "approach": "Combined two-tower retrieval, item-based collaborative filtering and popularity candidates, then used LightGBM ranking and diversity reranking.",
+      "result": "V2 reached 0.0778 NDCG@10 and 0.2219 Recall@20 on the held-out cohort.",
+      "disclaimer": "The public showcase uses precomputed recommendations for demo profiles."
+    },
+    {
+      "id": "anomaly",
+      "number": "03",
       "title": "Industrial Visual Anomaly Detection",
       "subtitle": "Visual anomaly detection using healthy product images.",
       "category": "Computer Vision",
@@ -96,7 +150,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "maintenance",
-      "number": "02",
+      "number": "04",
       "title": "Predictive Maintenance AI",
       "subtitle": "Predictive maintenance on NASA C-MAPSS data.",
       "category": "Predictive ML",
@@ -122,7 +176,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "incident",
-      "number": "03",
+      "number": "05",
       "title": "IncidentLens — AI Incident Investigator",
       "subtitle": "Explainable industrial incident investigation.",
       "category": "Agentic AI",
@@ -149,7 +203,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "devpilot",
-      "number": "04",
+      "number": "06",
       "title": "DevPilot AI",
       "subtitle": "Agentic software engineering assistant.",
       "category": "Agentic AI",
@@ -174,7 +228,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "lane",
-      "number": "05",
+      "number": "07",
       "title": "LaneDet — Real-time Lane Detection",
       "subtitle": "Computer vision benchmark for road scenes.",
       "category": "Computer Vision",
@@ -199,7 +253,7 @@ window.PORTFOLIO = {
     },
     {
       "id": "docsrag",
-      "number": "06",
+      "number": "08",
       "title": "CompanyDocs RAG Assistant",
       "subtitle": "Retrieval-augmented Q&A with open-source tools.",
       "category": "NLP & RAG",
